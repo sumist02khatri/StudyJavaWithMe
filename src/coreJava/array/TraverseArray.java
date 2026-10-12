@@ -1,14 +1,16 @@
 package coreJava.array;
 
+import java.util.Arrays;
+
 public class TraverseArray {
     public static void addArray(){
-        int [] arr = {2,4,2,2,1,4};
-        int sum = 0;
-        for(int num :arr){
-            sum=sum+num;
-            System.out.println(num);
-        }
-        System.out.println(sum);
+            int [] arr = {2,4,2,2,1,4};
+            int sum = 0;
+            for(int num :arr){
+                sum=sum+num;
+                System.out.println(num);
+            }
+            System.out.println(sum);
     }
 
     public static void evenArray(){
@@ -73,12 +75,46 @@ public class TraverseArray {
         }
 
     }
+    public static void copyArray(){
+        int [] arr={12,3,13,453,13,452,123,212};
+        int [] arr2 = Arrays.copyOf(arr,arr.length+1);
+        for(int num : arr2){
+            System.out.println(num);
+        }
+    }
+
+    public static void reverseArray(){
+        int [] arr={12,3,13,453,13,452,123,212};
+        for (int i = arr.length-1;i>=0;i--){
+            System.out.println(arr[i]);
+        }
+
+    }
+
+    public static void inPlaceReverseArray(){
+        int [] arr={12,3,13,453,13,452,123,212};
+        int left = 0;
+        int right = arr.length-1;
+        while (left<right){
+            int temp =arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+
+            left++;
+            right--;
+        }
+
+        for(int num: arr){
+        System.out.println(num);
+        }
+
+    }
 
 
 
 
     public static void main(String[] args) {
-        primeArray();
+        copyArray();
 
     }
 
