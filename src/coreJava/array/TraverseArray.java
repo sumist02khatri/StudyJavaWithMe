@@ -50,39 +50,6 @@ public class TraverseArray {
         }
 
     }
-
-    public static void primeArray(){
-        int [] arr = {12,33,52,53,6,36,11,2};
-
-        for (int i = 0; i < arr.length; i++) {
-            boolean isPrime = true;
-            if (arr[i] < 2) {
-                isPrime = false;
-            } else {
-                for (int j = 2; j * j <= arr[i]; j++) {
-                    if (arr[i] % j == 0) {
-                        isPrime = false;
-                        break;
-                    }
-
-                }
-            }
-
-            if (isPrime){
-                System.out.println(arr[i]);
-            }
-
-        }
-
-    }
-    public static void copyArray(){
-        int [] arr={12,3,13,453,13,452,123,212};
-        int [] arr2 = Arrays.copyOf(arr,arr.length+1);
-        for(int num : arr2){
-            System.out.println(num);
-        }
-    }
-
     public static void reverseArray(){
         int [] arr={12,3,13,453,13,452,123,212};
         for (int i = arr.length-1;i>=0;i--){
@@ -114,7 +81,7 @@ public class TraverseArray {
 
 
     public static void main(String[] args) {
-        copyArray();
+
 
     }
 
